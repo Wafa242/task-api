@@ -1,12 +1,16 @@
-# Task Management API (CI/CD DevOps Project)
+# Task API - DevOps Pipeline
 
-## ?? Description
-A containerized To-Do List REST API built with Python Flask, featuring automated testing, Docker containerization, and a complete CI/CD pipeline.
+A containerized Flask REST API with pytest, Docker, and GitHub Actions CI/CD.
 
-## ??? Tech Stack & Tools
-- **Language:** Python / Flask
-- **Version Control:** Git & GitHub
-- **Containerization:** Docker & Docker Compose
-- **CI/CD Pipeline:** GitHub Actions / Jenkins
-- **Testing:** pytest
+## Architecture
+Developer -> GitHub (develop) -> GitHub Actions (Flake8 + Pytest) -> Docker Hub -> Docker Compose
 
+## Endpoints
+- GET /health
+- GET /tasks
+- POST /tasks
+- PUT /tasks/<id>
+- DELETE /tasks/<id>
+
+## Run
+docker compose up -d
